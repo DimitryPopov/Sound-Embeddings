@@ -7,7 +7,7 @@ internes d'un modèle de parole. Aucune étiquette n'est utilisée à l'apprenti
 
 Sur 8 000 morceaux du corpus FMA répartis en huit genres, le moteur retrouve un
 morceau du même genre dans **40 % des cas** parmi les cinq plus proches voisins,
-contre 12,5 % pour un tirage au hasard — soit 3,2 fois mieux, sans qu'aucun
+contre 12,5 % pour un tirage au hasard soit 3,2 fois mieux, sans qu'aucun
 genre n'ait été montré au système.
 
 | Genre | Précision@5 |
@@ -50,6 +50,8 @@ d'autres une famille percussive. Ce récit est dans
 Le fonctionnement de wav2vec 2.0 et le lien théorique entre son quantizer et la
 méthode employée ici sont détaillés dans [docs/wav2vec2.pdf](docs/wav2vec2.pdf).
 
+Le notebook d'origine, sur l'album *Currents*, est dans
+[Currents-Music-Similarity](https://github.com/DimitryPopov/Currents-Music-Similarity).
 ## Fonctionnement
 
 ```
@@ -117,13 +119,13 @@ Chaque configuration a été mesurée avec la même métrique, sur le même
 | K = 1024 | 0,3905 | **0,4000** |
 
 **La granularité du vocabulaire est le levier principal.** Passer de 50 à 1024
-tokens fait gagner près de 8 points, avec des rendements décroissants — le
+tokens fait gagner près de 8 points, avec des rendements décroissants le
 plateau n'est pas encore atteint.
 
 **Le TF-IDF n'a pas tenu ses promesses.** L'hypothèse venait de la recherche
 textuelle : pondérer chaque token par son IDF (Spärck Jones, 1972) pour atténuer
 les unités présentes partout, comme on écarte les mots vides. À K = 50 l'effet
-est nul. L'analogie a une limite — un token acoustique fréquent décrit malgré
+est nul. L'analogie a une limite car un token acoustique fréquent décrit malgré
 tout du son, et le pénaliser retire autant de signal que de bruit. Le gain
 devient perceptible mais reste faible aux grands vocabulaires, quand les unités
 sont assez spécifiques pour qu'une pondération ait quelque chose à distinguer.
@@ -131,7 +133,7 @@ sont assez spécifiques pour qu'une pondération ait quelque chose à distinguer
 **La couche 2 plutôt que la couche 12.** La couche haute est celle sur laquelle
 porte la loss contrastive, donc la plus spécialisée à la parole. En recollant
 l'audio des trames assignées à un même token, on entend des timbres
-identifiables — un synthétiseur, une famille percussive — et non des unités
+identifiables : un synthétiseur, une famille percussive et non des unités
 sub-phonémiques.
 
 ## Limites
