@@ -147,7 +147,7 @@ sub-phonémiques.
   qui simplifie la réalité musicale.
 - **Modèle entraîné sur de la parole.** Le transfert à la musique est l'objet de
   l'expérience, pas une hypothèse validée. Un modèle entraîné sur de l'audio
-  général donnerait probablement de meilleurs résultats — au prix de la
+  général donnerait probablement de meilleurs résultats au prix de la
   compréhension fine que j'ai du modèle employé ici.
 
 ## Structure
