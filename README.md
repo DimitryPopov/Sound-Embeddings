@@ -101,7 +101,7 @@ Voisins du fichier : 000002.mp3
   Richter Scale                          Hip-Hop        0.6895
 ```
 
-Le morceau interrogé étant lui-même indexé, il ressort en tête à 1,0000 — les
+Le morceau interrogé étant lui-même indexé, il ressort en tête à 1,0000 les
 quatre suivants sont les vrais voisins.
 
 Le corpus FMA se télécharge depuis [mdeff/fma](https://github.com/mdeff/fma).
