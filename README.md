@@ -48,7 +48,7 @@ d'autres une famille percussive. Ce récit est dans
 [docs/origine.md](docs/origine.md).
 
 Le fonctionnement de wav2vec 2.0 et le lien théorique entre son quantizer et la
-méthode employée ici sont détaillés dans [docs/wav2vec2.pdf](docs/wav2vec2.pdf).
+méthode employée ici sont détaillés dans [docs/wav2vec20_Sound-Embeddings.pdf](wav2vec20_Sound-Embeddings.pdf).
 
 Le notebook d'origine, sur l'album *Currents*, est dans
 [Currents-Music-Similarity](https://github.com/DimitryPopov/Currents-Music-Similarity).
