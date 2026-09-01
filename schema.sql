@@ -84,7 +84,7 @@ CREATE OR REPLACE VIEW token_weights AS
 SELECT s.vocabulary_id,
        s.token_id,
         -- ln(1.0 / s.mean_p) AS weight            -- frequence de collection inverse
-       ln(n.total::DOUBLE / s.df) AS weight       -- IDF classique (Sparck Jones, 1972)
+       ln(n.total::DOUBLE / s.df) AS weight       -- IDF classique (Sparck Jones, 1972) (explication dans le pdf extrait carnet de recherche)
 FROM token_stats s
 JOIN (SELECT vocabulary_id, count(DISTINCT track_id) AS total
       FROM profiles GROUP BY vocabulary_id) n
